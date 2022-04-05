@@ -1,0 +1,19 @@
+<div>
+    <p *ngIf="forecastError" class="error-message">Invalid zip code</p>
+</div>
+<div class="panel panel-default" *ngIf="!forecastError">
+    <div class="panel-heading">
+        <h3 class="panel-title">5-day forecast for {{cityName}} </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let condition of conditions">
+            {{condition.date | date: 'EEEE, MMM d'}}:
+            {{condition.weather}}
+            - Min: {{condition.min}}
+            - Max: {{condition.max}}
+            <img class="icon" [src]="condition.icon">
+        </li>
+    </ul>
+</div>
+<button class="btn btn-success" tabindex="0" id="mainPageBtn" (click)="navigateToMainPage()">&lt; Back to main
+    page</button>

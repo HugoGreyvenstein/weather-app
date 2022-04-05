@@ -1,0 +1,21 @@
+<div>
+    <div class="well flex">
+        <div>
+            <h3>{{conditions?.name}} ({{zipCode}})</h3>
+            <h4>Current conditions: {{conditions?.weather}}</h4>
+            <h4>Temperatures today:</h4>
+            <p>
+                Current {{conditions?.current}}
+                - Max {{conditions?.max}}
+                - Min {{conditions?.min}}
+            </p>
+            <p>
+                <a [routerLink]="['/forecast', zipCode]">Show 5-day forecast for {{conditions?.name}}</a>
+            </p>
+        </div>
+        <div>
+            <span class="close" (click)="closeWeatherItem()">×</span>
+            <img [src]="conditions?.icon">
+        </div>
+    </div>
+</div>
