@@ -50,6 +50,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'hugo-greyvenstein-weather-app'
-          slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_17B64E0436F44A7BB689DB898EFAF0FD }}
-          package: .
+          package: ./dist/weather-app
