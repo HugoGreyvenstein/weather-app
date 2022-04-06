@@ -41,7 +41,7 @@ jobs:
 
     steps:
       - name: Display structure before download
-        run: ls
+        run: ls -R
         working-directory: .
     
       - name: Download artifact from build job
@@ -51,7 +51,7 @@ jobs:
           path: ./dist/demo/
       
       - name: Display structure of downloaded files
-        run: ls
+        run: ls -R
         working-directory: .
           
       - name: 'Deploy to Azure Web App'
