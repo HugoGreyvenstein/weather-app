@@ -51,4 +51,4 @@ jobs:
         with:
           app-name: 'hugo-greyvenstein-weather-app'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_17B64E0436F44A7BB689DB898EFAF0FD }}
-          package: ./dist/weather-app
+          package: ./dist/demo
